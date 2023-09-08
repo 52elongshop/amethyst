@@ -37,7 +37,7 @@ import java.util.Locale
 
 val DefaultChannels = setOf(
     "25e5c82273a271cb1a840d0060391a0bf4965cafeb029d5ab55350b418953fbb", // -> Anigma's Nostr
-    "42224859763652914db53052103f0b744df79dfc4efef7e950fc0802fc3df3c5" // -> Amethyst's Group
+    "42224859763652914db53052103f0b744df79dfc4efef7e950fc0802fc3df3c5" // -> Amethyst's Group  紫水晶的小组
 )
 
 fun getLanguagesSpokenByUser(): Set<String> {
@@ -49,7 +49,7 @@ fun getLanguagesSpokenByUser(): Set<String> {
     return codedList
 }
 
-val GLOBAL_FOLLOWS = " Global " // This has spaces to avoid mixing with a potential NIP-51 list with the same name.
+val GLOBAL_FOLLOWS = " Global " // This has spaces to avoid mixing with a potential NIP-51 list with the same name.这里有空格，以避免与具有相同名称的潜在ip -51列表混淆。
 val KIND3_FOLLOWS = " All Follows " // This has spaces to avoid mixing with a potential NIP-51 list with the same name.
 
 @OptIn(DelicateCoroutinesApi::class)
@@ -57,7 +57,7 @@ val KIND3_FOLLOWS = " All Follows " // This has spaces to avoid mixing with a po
 class Account(
     val keyPair: KeyPair,
 
-    var followingChannels: Set<String> = DefaultChannels, // deprecated
+    var followingChannels: Set<String> = DefaultChannels, // deprecated  弃用
     var followingCommunities: Set<String> = setOf(), // deprecated
     var hiddenUsers: Set<String> = setOf(), // deprecated
 
